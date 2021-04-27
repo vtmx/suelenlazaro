@@ -286,6 +286,7 @@ h5 a,
 h6 a {
   color: inherit;
   text-decoration: none;
+  border: none;
 }
 
 h1.major,
@@ -1238,7 +1239,7 @@ button {
   -webkit-transition-delay: 0.75s;
   -ms-transition-delay: 0.75s;
   transition-delay: 0.75s;
-  background-image: linear-gradient(to top, rgba(19, 21, 25, 0.8), rgba(19, 21, 25, 0.8)), url('../../images/overlay.png');
+  background-image: linear-gradient(to top, rgba(19, 21, 25, 0.3), rgba(19, 21, 25, 0.2)), url('../../images/overlay.png');
   background-size: auto, 256px 256px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
@@ -1254,7 +1255,7 @@ button {
   -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
   -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
   transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-  background-image: url('../../images/pic06.jpg');
+  background-image: url('../../images/levi.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1358,18 +1359,6 @@ body.is-preload #bg:before {
   -ms-transition: opacity 0.325s ease-in-out;
   transition: opacity 0.325s ease-in-out;
   position: relative;
-  margin-top: 3.5rem;
-}
-
-#header > *:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: calc(-3.5rem - 1px);
-  left: calc(50% - 1px);
-  width: 1px;
-  height: calc(3.5rem + 1px);
-  background: #ffffff;
 }
 
 #header > :first-child {
@@ -1393,10 +1382,6 @@ body.is-preload #bg:before {
 }
 
 #header .content {
-  border-style: solid;
-  border-color: #ffffff;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
   max-width: 100%;
 }
 
@@ -1409,9 +1394,7 @@ body.is-preload #bg:before {
   -webkit-transition-delay: 0.25s;
   -ms-transition-delay: 0.25s;
   transition-delay: 0.25s;
-  padding: 3rem 2rem;
   max-height: 40rem;
-  overflow: hidden;
 }
 
 #header .content .inner > :last-child {
@@ -1426,24 +1409,18 @@ body.is-preload #bg:before {
 }
 
 #header nav ul {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
   display: flex;
+  flex-direction: column;
   margin-bottom: 0;
   list-style: none;
   padding-left: 0;
-  border: solid 1px #ffffff;
-  border-radius: 4px;
 }
 
 #header nav ul li {
+  margin-bottom: 16px;
   padding-left: 0;
-  border-left: solid 1px #ffffff;
-}
-
-#header nav ul li:first-child {
-  border-left: 0;
+  border: solid 1px #ffffff;
+  border-radius: 4px;
 }
 
 #header nav ul li a {
@@ -1456,10 +1433,10 @@ body.is-preload #bg:before {
   letter-spacing: 0.2rem;
   font-size: 1rem;
   font-weight: bold;
-  border-bottom: 0;
 }
 
-#header nav ul li a:hover {
+#header nav ul li a:hover,
+#header h1 a:hover {
   background-color: rgba(255, 255, 255, 0.075);
 }
 
@@ -1476,10 +1453,6 @@ body.is-preload #bg:before {
   width: 1px;
   height: 100%;
   background: #ffffff;
-}
-
-#header nav.use-middle ul li.is-middle {
-  border-left: 0;
 }
 
 body.is-article-visible #header {
@@ -1519,10 +1492,6 @@ body.is-preload #header .content .inner {
 }
 
 @media screen and (max-width: 736px) {
-  #header > * {
-    margin-top: 2rem;
-  }
-
   #header > *:before {
     top: calc(-2rem - 1px);
     height: calc(2rem + 1px);
@@ -1536,10 +1505,6 @@ body.is-preload #header .content .inner {
 
   #header .logo .icon:before {
     font-size: 1.75rem;
-  }
-
-  #header .content .inner {
-    padding: 2.5rem 1rem;
   }
 
   #header .content p {
@@ -1566,12 +1531,7 @@ body.is-preload #header .content .inner {
   }
 
   #header nav ul li {
-    border-left: 0;
     border-top: solid 1px #ffffff;
-  }
-
-  #header nav ul li:first-child {
-    border-top: 0;
   }
 
   #header nav ul li a {
@@ -1584,6 +1544,29 @@ body.is-preload #header .content .inner {
   #header nav.use-middle:after {
     display: none;
   }
+}
+
+/* ------- =meu código ---*/
+
+#header .inner {
+  margin: 32px 0;
+}
+
+.title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.title a {
+  display: block;
+  padding: 16px 24px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
+.subtitle {
+  margin: 32px 0;
+  font-size: 18px;
 }
 
 /* Main */
